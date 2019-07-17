@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
+#This is the final code written by Reza Mirjalili
 
 from __future__ import print_function
 from ortools.constraint_solver import routing_enums_pb2
@@ -24,7 +24,7 @@ import operator
 # In[ ]:
 
 
-#data f
+
 N = [i for i in range(24)]
 Inc = np.array(pd.read_excel('C:\data.xlsx',sheet_name=0),int)
 cost = np.array(pd.read_excel('C:\data.xlsx',sheet_name=1),int)
@@ -126,7 +126,9 @@ B = 10**7
 
 # In[222]:
 
-
+### The Vehicle routing function (OR-tools google)
+## The code are adopted from the link below
+#https://developers.google.com/optimization/routing/vrptw
 def create_data_model(I,j):
     """Stores the data for the problem."""
     #tm = np.array(pd.read_excel('C:\data2.xlsx',sheet_name=0),int)
@@ -372,38 +374,6 @@ while chk>0 and len(sl[0])>1:
 tmr+=timeit.default_timer()-strt
 
 
-# In[236]:
-
-
-DZ
-
-
-# In[248]:
-
-
-tmr
-
-
-# In[245]:
-
-
-cap
-
-
-# In[161]:
-
-
-AS
-
-
-# In[118]:
-
-
-
-
-
-# In[231]:
-
 
 def extend_service(JJ,active_route):
     #Close a center by adding its nodes to anothers center
@@ -483,20 +453,6 @@ def swap_service(JJ,active_route):
     return br
             
 
-
-# In[67]:
-
-
-
-
-
-# In[62]:
-
-
-len(sl[0])
-
-
-# In[190]:
 
 
 def update_current_routes(j1,k1,j2,k2):
@@ -597,13 +553,6 @@ def self_improvement(sl):
         
 
 
-# In[186]:
-
-
-tw
-
-
-# In[8]:
 
 
 def IRL(routes,tw,r):
@@ -968,14 +917,5 @@ def kMedoids(D, k, tmax=1000):
     return M, C
 
 
-# In[46]:
 
-
-MM,CC = kMedoids(tm, 20, tmax=10000)
-
-
-# In[215]:
-
-
-MM
 
