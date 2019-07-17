@@ -24,6 +24,7 @@ import operator
 # In[ ]:
 
 
+#data f
 N = [i for i in range(24)]
 Inc = np.array(pd.read_excel('C:\data.xlsx',sheet_name=0),int)
 cost = np.array(pd.read_excel('C:\data.xlsx',sheet_name=1),int)
